@@ -118,7 +118,7 @@
 			acsDenver2021Layer = L.geoJSON(data, { style : style1,
 			onEachFeature : function(feature, layer) {
 				layer.bindPopup("Average Rent: " + 
-feature.properties.PCT_ASIAN + "%");
+feature.properties.MED_GROSS_RENT);
 				}
 			}).addTo(map);
 
