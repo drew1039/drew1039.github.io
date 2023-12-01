@@ -150,6 +150,43 @@ feature.properties.PCT_ASIAN + "%");
     };
 
     legend.addTo(map);
+
+		 var marker = L.marker([39.743825, -105.001445]).addTo(map);
+  var circle = L.circle([39.743212, -105.005929], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 450
+}).addTo(map);
+  var polygon = L.polygon([
+    [39.743347, -105.011061],
+    [39.743654, -105.010339],
+    [39.742935, -105.009773],
+    [39.742607, -105.010503]
+    
+]).addTo(map);
+  marker.bindPopup("<b>Science Building</b><br>Auraria Campus.").openPopup();
+circle.bindPopup("Auraria Campus.");
+polygon.bindPopup("5th Street Parking Garage.");
+  var popup = L.popup()
+    .setLatLng([39.741617, -105.012876])
+    .setContent("Auraria Light-Rail Station.")
+    .openOn(map);
+  function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on('click', onMapClick);
+  var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
       
 	// end document ready
 	});
