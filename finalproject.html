@@ -159,15 +159,32 @@ feature.properties.MED_GROSS_RENT);
     radius: 450
 }).addTo(map);
   var polygon = L.polygon([
-    [39.743347, -105.011061],
-    [39.743654, -105.010339],
-    [39.742935, -105.009773],
-    [39.742607, -105.010503]
+    [39.684422, -104.965117],
+    [39.683135, -104.961941],
+    [39.682715, -104.959565],
+    [39.680138, -104.959495],
+    [39.680118, -104.960048],
+    [39.678297, -104.960069],
+    [39.678288, -104.959589],
+    [39.673029, -104.959667],
+    [39.672983, -104.961201],
+    [39.671228, -104.961217],
+    [39.671257, -104.964049],
+    [39.673015, -104.964055],
+    [39.672982, -104.963465],
+    [39.67445, -104.963518],
+    [39.674459, -104.964023],
+    [39.674888, -104.964012],
+    [39.674871, -104.965203],
+    [39.683877, -104.96516],
+    [39.68396, -104.966362],
+    [39.685296, -104.966351],
+    [39.684699, -104.965181]
     
 ]).addTo(map);
   marker.bindPopup("<b>Science Building</b><br>Auraria Campus.").openPopup();
 circle.bindPopup("Auraria Campus.");
-polygon.bindPopup("5th Street Parking Garage.");
+polygon.bindPopup("Denver University Campus.");
   var popup = L.popup()
     .setLatLng([39.741617, -105.012876])
     .setContent("Auraria Light-Rail Station.")
@@ -198,7 +215,7 @@ map.on('click', onMapClick);
 
 <div id="header">
 	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 American Community Survey (Census) data</a></h1>
-  <h2> Percentage of Asian Population in Denver Metro Area </h2>
+  <h2> Average Rent Prices in the Denver Metro Area </h2>
 	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
 </div>
 <div id="map"></div>
