@@ -151,8 +151,8 @@ feature.properties.MED_GROSS_RENT);
 
     legend.addTo(map);
 
-		 var marker = L.marker([]).addTo(map);
-  var circle = L.circle([], {
+		 var marker = L.marker([39.743907, -105.020027]).addTo(map);
+  var circle = L.circle([39.743825, -105.005586], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -183,7 +183,21 @@ feature.properties.MED_GROSS_RENT);
 
 	  }).addTo(map);
   var polygon = L.polygon([
-	  []
+	  [39.742505, -105.013268],
+	  [39.743544, -105.01139],
+	  [39.74493, -105.009481],
+	  [39.746398, -105.007238],
+	  [39.747627, -105.00432],
+	  [39.747478, -105.002711],
+	  [39.745326, -105.000823],
+	  [39.742439, -105.000275],
+	  [39.741903, -105.000018],
+	  [39.741507, -105.000232],
+	  [39.740344, -105.000329],
+	  [39.740344, -105.004975],
+	  [39.740616, -105.0102],
+	  [39.740723, -105.012163],
+	  [39.742439, -105.013354]
     
 ]).addTo(map);
   marker.bindPopup("<b>Science Building</b><br>Auraria Campus.").openPopup();
