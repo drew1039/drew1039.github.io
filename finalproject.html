@@ -156,7 +156,15 @@ feature.properties.MED_GROSS_RENT);
 		 var marker3 = L.marker([39.749409, -105.013011]).addTo(map);
 		 var marker4 = L.marker([39.756053, -104.994063]).addTo(map);
 		 var marker5 = L.marker([39.742386, -104.996316]).addTo(map);
-  var circle = L.circle([39.743825, -105.005586], {
+		 var marker6 = L.marker([39.639781, -104.856091]).addTo(map);
+		 var marker7 = L.marker([39.600159, -104.893255]).addTo(map);
+		 var marker8 = L.marker([39.657652, -104.988023]).addTo(map);
+  var circle1 = L.circle([39.743825, -105.005586], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 450
+var circle2 = L.circle([39.678934, -104.962628], 
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -210,7 +218,11 @@ feature.properties.MED_GROSS_RENT);
   marker3.bindPopup("<b>Elitch Gardens</b><br>Amusement Park.").openPopup();
   marker4.bindPopup("<b>Coors Field</b><br>Sports/Concert Stadium.").openPopup();
   marker5.bindPopup("<b>Colorado Convention Center</b><br>Theater.").openPopup();
-circle.bindPopup("Auraria Campus 5 mile Radius.");
+  marker6.bindPopup("<b>Cherry Creek Reservior</b><br>State Park.").openPopup();
+  marker7.bindPopup("<b>Fiddler's Green</b><br>Ampitheatre.").openPopup();
+  marker8.bindPopup("<b>Gothic Theatre</b><br>Ampitheatre.").openPopup();
+circle1.bindPopup("Auraria Campus 5 mile Radius.");
+circle2.bindPopup("University of Denver Campus 5 mile Radius.");
 polygon1.bindPopup("Denver University Campus.");
 polygon2.bindPopup("Auraria Campus.");
   var popup = L.popup()
