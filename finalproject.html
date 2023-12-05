@@ -60,15 +60,13 @@
 
 <script>
 
-        // the document ready wraps our javascript
-	// to make sure that everything loads in the 
-	// right order
+       
 	$(document).ready(function() {
 
-		// let's create our basemap! -- ##1 here
+	
     		map = L.map('map').setView([0,0],10);
 		
-		// let's add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
+		
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -80,15 +78,15 @@
 			maxZoom: 19,
 			attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'});
 
-		// this is an object to keep track of our three basemaps -- ##2 here
+		
 		var baseMaps = { "OpenStreetMap" : OSMTiles,
 				"Humanitarian OSM" : HOTOSMTiles,
 				"OpenTopoMap" : OpenTopoMap }; 
 
-		// the control let's the user turn on / off layers -- ##3 here
+		
 		var layerControl = L.control.layers(baseMaps,null).addTo(map);
     
-    // function to satyle my chloropath map
+
     function style1(feature) {
 	    d = feature.properties.MED_GROSS_RENT;
 	    answer = d > 2700 ? '#800026' :
@@ -112,9 +110,9 @@
 	            
     }
 		
-    // let's add the Denver ACS data -- ##4 here
+ 
                 $.getJSON('./acs_denver_2021.geojson', function(data) {
-			// convert the file (data) into a layer
+			
 			acsDenver2021Layer = L.geoJSON(data, { style : style1,
 			onEachFeature : function(feature, layer) {
 				layer.bindPopup("Average Rent: " + 
@@ -122,14 +120,14 @@ feature.properties.MED_GROSS_RENT);
 				}
 			}).addTo(map);
 
-			// move the map to the area of the data 
+			
 			map.panTo(acsDenver2021Layer.getBounds().getCenter());
 
-			// add the map to the layer controls
+			
 			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
 	        });
 
-		// let's try to add some remote DRCOG data
+	
 		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
 			newLayer = L.geoJSON(data);
 			layerControl.addOverlay(newLayer, "Highway Markers");
@@ -228,41 +226,26 @@ circle2.bindPopup("University of Denver Campus 5 mile Radius.");
 polygon1.bindPopup("University of Denver Campus.");
 polygon2.bindPopup("Auraria Campus.");
 
- function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
-}
+
 		
 map.on('click', onMapClick);		
-  var popup1 = L.popup()
+  var popup = L.popup()
     .setLatLng([39.679264, -104.962306])
-    .setContent("University of Denver Campus.")
+    .setContent("College Campus.")
     .openOn(map);	
-  function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
-}
 
-map.on('click', onMapClick);
-  var popup2 = L.popup()
-	.setLatLng([39.741617, -105.012876])
-    .setContent("Auraria Campus")
-    .openOn(map);	
 
 function onMapClick(e) {
-    popup1
+    popup
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);
 }
-   function onMapClick(e) {
-    popup2
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
+
 
 map.on('click', onMapClick);
       
-	// end document ready
+	
 	});
 
 </script>
