@@ -228,7 +228,7 @@ circle2.bindPopup("University of Denver Campus 5 mile Radius.");
 polygon1.bindPopup("Denver University Campus.");
 polygon2.bindPopup("Auraria Campus.");
  
-  var popup = L.popup()
+  var popup1 = L.popup()
     .setLatLng([39.679264, -104.962306])
     .setContent("University of Denver Campus.")
     .openOn(map);	
@@ -237,13 +237,18 @@ polygon2.bindPopup("Auraria Campus.");
 }
 
 map.on('click', onMapClick);
-  var popup = L.popup()
+  var popup2 = L.popup()
 	.setLatLng([39.741617, -105.012876])
     .setContent("Auraria Campus.")
     .openOn(map);	
 
 function onMapClick(e) {
-    popup
+    popup1
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+
+    popup2
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);
