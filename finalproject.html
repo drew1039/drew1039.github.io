@@ -233,7 +233,12 @@ map.on('click', onMapClick);
     .setLatLng([39.679264, -104.962306])
     .setContent("College Campus")
     .openOn(map);	
-
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
  var popup = L.popup()
     .setLatLng([39.743588, -105.005522])
     .setContent("College Campus")
