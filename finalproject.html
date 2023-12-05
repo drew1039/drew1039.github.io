@@ -86,7 +86,17 @@
 		
 		var layerControl = L.control.layers(baseMaps,null).addTo(map);
     
+ var popup1 = L.popup()
+    .setLatLng([39.679264, -104.962306])
+    .setContent("College Campus")
+    .openOn(map);	
 
+
+ var popup2 = L.popup()
+    .setLatLng([39.743588, -105.005522])
+    .setContent("College Campus")
+    .openOn(map);
+		
     function style1(feature) {
 	    d = feature.properties.MED_GROSS_RENT;
 	    answer = d > 2700 ? '#800026' :
@@ -225,21 +235,13 @@ circle1.bindPopup("Auraria Campus 5 mile Radius.");
 circle2.bindPopup("University of Denver Campus 5 mile Radius.");
 polygon1.bindPopup("University of Denver Campus.");
 polygon2.bindPopup("Auraria Campus.");
-
+popup1.openOn(map);
+popup2.openOn(map);
 		
-  var popup1 = L.popup()
-    .setLatLng([39.679264, -104.962306])
-    .setContent("College Campus")
-    .openOn(map);	
-
-setTimeout(function() {
- var popup2 = L.popup()
-    .setLatLng([39.743588, -105.005522])
-    .setContent("College Campus")
-    .openOn(map);	
+	
 
 
-},0);
+
 	});
 
 </script>
