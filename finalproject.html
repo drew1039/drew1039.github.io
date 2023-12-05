@@ -229,21 +229,21 @@ polygon2.bindPopup("Auraria Campus.");
 
 		
 map.on('click', onMapClick);		
-  var popup = L.popup()
+  var popup1 = L.popup()
     .setLatLng([39.679264, -104.962306])
     .setContent("College Campus")
     .openOn(map);	
 
- var popup = L.popup()
+ var popup2 = L.popup()
     .setLatLng([39.743588, -105.005522])
     .setContent("College Campus")
     .openOn(map);	
 function onMapClick(e) {
-    popup
+    popup1
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);function onMapClick(e) 
-    
+    popup2
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);
