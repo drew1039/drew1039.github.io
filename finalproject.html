@@ -236,22 +236,7 @@ polygon2.bindPopup("Auraria Campus.");
     .setLatLng([39.743588, -105.005522])
     .setContent("College Campus")
     .openOn(map);	
-function onMapClick(e) {
-    popup1
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);function onMapClick(e) 
-    popup2
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
 
-}
-
-
-map.on('click', onMapClick);
-      
-	
 	});
 
 </script>
