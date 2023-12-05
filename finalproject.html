@@ -225,9 +225,10 @@ feature.properties.MED_GROSS_RENT);
   marker8.bindPopup("<b>Gothic Theatre</b><br>Ampitheatre.").openPopup();
 circle1.bindPopup("Auraria Campus 5 mile Radius.");
 circle2.bindPopup("University of Denver Campus 5 mile Radius.");
-polygon1.bindPopup("Denver University Campus.");
+polygon1.bindPopup("University of Denver Campus.");
 polygon2.bindPopup("Auraria Campus.");
- 
+
+map.on('click', onMapClick);		
   var popup1 = L.popup()
     .setLatLng([39.679264, -104.962306])
     .setContent("University of Denver Campus.")
