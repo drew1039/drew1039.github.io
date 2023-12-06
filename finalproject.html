@@ -162,15 +162,23 @@ feature.properties.MED_GROSS_RENT);
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 4023.36
+    radius: 4828.03
 }).addTo(map);
 	 
     var circle2 = L.circle([39.678934, -104.962628], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 4023.36
+    radius: 4828.03
 }).addTo(map);
+
+ var circle3 = L.circle([39.678934, -104.962628], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 4828.03
+}).addTo(map);
+		
   var polygon1 = L.polygon([
     [39.684422, -104.965117],
     [39.683135, -104.961941],
@@ -214,6 +222,17 @@ feature.properties.MED_GROSS_RENT);
 	  [39.742439, -105.013354]
     
 ]).addTo(map);
+
+ var polygon3 = L.polygon([ 
+	 [39.791895, -105.034511],
+	 [39.791994, -105.030026],
+	 [39.791039, -105.029984],
+	 [39.791039, -105.025477],
+	 [39.787629, -105.025456],
+	 [39.787579, -105.034404]
+	 
+	 ]).addTo(map);
+		
   marker1.bindPopup("<b>Empower Field</b><br>Sports/Concert Stadium.").openPopup();
   marker2.bindPopup("<b>Ball Arena</b><br>Sports/Concert Stadium.").openPopup();
   marker3.bindPopup("<b>Elitch Gardens</b><br>Amusement Park.").openPopup();
@@ -222,10 +241,12 @@ feature.properties.MED_GROSS_RENT);
   marker6.bindPopup("<b>Cherry Creek Reservior</b><br>State Park.").openPopup();
   marker7.bindPopup("<b>Fiddler's Green</b><br>Ampitheatre.").openPopup();
   marker8.bindPopup("<b>Gothic Theatre</b><br>Ampitheatre.").openPopup();
-circle1.bindPopup("Auraria Campus 5 mile Radius.");
-circle2.bindPopup("University of Denver Campus 5 mile Radius.");
+circle1.bindPopup("Auraria Campus 3 mile Radius.");
+circle2.bindPopup("University of Denver Campus 3 mile Radius.");
+circle3.bindPopup("Regis University Campus 3 mile Radius.");
 polygon1.bindPopup("University of Denver Campus.");
-polygon2.bindPopup("Auraria Campus.");
+polygon2.bindPopup("Auraria Campus (MSU Denver, University of Colorado Denver, Denver Community College).");
+polygon3.bindPopup("Regis University Campus");
 
 		 var popup = L.popup()
     .setLatLng([39.743858, -105.007067])
