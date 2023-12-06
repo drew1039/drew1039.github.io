@@ -125,14 +125,10 @@ feature.properties.MED_GROSS_RENT);
 			map.panTo(acsDenver2021Layer.getBounds().getCenter());
 
 			
-			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
+			layerControl.addOverlay(acsDenver2021Layer, "Average Rent Prices");
 	        });
 
 	
-		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
-			newLayer = L.geoJSON(data);
-			layerControl.addOverlay(newLayer, "Highway Markers");
-		});
 
     var legend = L.control({position: 'bottomright'});
 
@@ -155,9 +151,12 @@ feature.properties.MED_GROSS_RENT);
 		 var marker3 = L.marker([39.749409, -105.013011]).addTo(map);
 		 var marker4 = L.marker([39.756053, -104.994063]).addTo(map);
 		 var marker5 = L.marker([39.742386, -104.996316]).addTo(map);
-		 var marker6 = L.marker([39.639781, -104.856091]).addTo(map);
-		 var marker7 = L.marker([39.600159, -104.893255]).addTo(map);
+		 var marker6 = L.marker([39.682969, -105.00734]).addTo(map);
+		 var marker7 = L.marker([39.700536, -104.970776]).addTo(map);
 		 var marker8 = L.marker([39.657652, -104.988023]).addTo(map);
+		 var marker9 = L.marker([39.797305, -105.038738]).addTo(map);
+		 var marker10 = L.marker([39.776849, -105.043555]).addTo(map);
+		 var marker11= L.marker([39.787373, -105.049982]).addTo(map);
   var circle1 = L.circle([39.743825, -105.005586], {
     color: 'red',
     fillColor: '#f03',
@@ -238,15 +237,18 @@ feature.properties.MED_GROSS_RENT);
   marker3.bindPopup("<b>Elitch Gardens</b><br>Amusement Park.").openPopup();
   marker4.bindPopup("<b>Coors Field</b><br>Sports/Concert Stadium.").openPopup();
   marker5.bindPopup("<b>Colorado Convention Center</b><br>Theater.").openPopup();
-  marker6.bindPopup("<b>Cherry Creek Reservior</b><br>State Park.").openPopup();
-  marker7.bindPopup("<b>Fiddler's Green</b><br>Ampitheatre.").openPopup();
-  marker8.bindPopup("<b>Gothic Theatre</b><br>Ampitheatre.").openPopup();
-circle1.bindPopup("Auraria Campus 3 mile Radius.");
-circle2.bindPopup("University of Denver Campus 3 mile Radius.");
-circle3.bindPopup("Regis University Campus 3 mile Radius.");
-polygon1.bindPopup("University of Denver Campus.");
-polygon2.bindPopup("Auraria Campus (MSU Denver, University of Colorado Denver, Denver Community College).");
-polygon3.bindPopup("Regis University Campus");
+  marker6.bindPopup("<b>Ruby Hill</b><br>Ski/Snowboard Park.").openPopup();
+  marker7.bindPopup("<b>Washington Park</b><br>State Park.").openPopup();
+  marker8.bindPopup("<b>Lakeside</b><br>Amusement Park.").openPopup();
+  marker9.bindPopup("<b>Lowell Ponds</b><br>Wildlife Area.").openPopup();
+  marker10.bindPopup("<b>Oriental Theatre</b><br>Ampitheatre.").openPopup();
+  marker11.bindPopup("<b>Willis Case Golf Course</b><br>Golf Course and Driving Range.").openPopup();
+	circle1.bindPopup("Auraria Campus 3 mile Radius.");
+	circle2.bindPopup("University of Denver Campus 3 mile Radius.");
+	circle3.bindPopup("Regis University Campus 3 mile Radius.");
+		polygon1.bindPopup("University of Denver Campus.");
+		polygon2.bindPopup("Auraria Campus (MSU Denver, University of Colorado Denver, Denver Community College).");
+		polygon3.bindPopup("Regis University Campus");
 
 		 var popup = L.popup()
     .setLatLng([39.743858, -105.007067])
@@ -276,7 +278,7 @@ map.on('click', onMapClick);
 
 <div id="header">
 	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 American Community Survey (Census) data</a></h1>
-  <h2> Average Rent Prices in the Denver Metro Area </h2>
+  <h2> Which College Should I Attend? Average Rent Prices and Attractions Within a 3-Mile Radius of Each Campus </h2>
 	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
 </div>
 <div id="map"></div>
