@@ -165,7 +165,27 @@ feature.properties.MED_GROSS_RENT);
    $("#mapswitcher").click( function() {
 	   viewCounter++;
 	   if (viewCounter % 2 == 0) {
-		   map.setView([39.743595, -105.005586], 13);
+		   map.setView([39.743595, -105.005586], 14);
+	   } else {
+		map.setView([39.732725, -104.980545], 12);
+	   }
+   });
+
+		  var viewCounter = 1;
+   $("#mapswitcher2").click( function() {
+	   viewCounter++;
+	   if (viewCounter % 2 == 0) {
+		   map.setView([39.678934, -104.962628], 14);
+	   } else {
+		map.setView([39.732725, -104.980545], 12);
+	   }
+   });
+
+		  var viewCounter = 1;
+   $("#mapswitcher3").click( function() {
+	   viewCounter++;
+	   if (viewCounter % 2 == 0) {
+		   map.setView([39.789624, -105.03187], 14);
 	   } else {
 		map.setView([39.732725, -104.980545], 12);
 	   }
@@ -300,6 +320,8 @@ map.on('click', onMapClick);
   <h2> Which College Should I Attend? Average Rent Prices and Attractions Within a 3-Mile Radius of 3 Different Colleges </h2>
 	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
 	<button id="mapswitcher">Auraria Campus</button>
+	<button id="mapswitcher2">University of Denver Campus</button>
+	<button id="mapswitcher3">Regis University Campus</button>
 	
 </div>
 <div id="map"></div>
