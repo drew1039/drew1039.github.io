@@ -10,8 +10,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<style>
 		html, body {
 			height: 100%;
@@ -138,26 +137,28 @@ feature.properties.MED_GROSS_RENT);
 		 var marker8 = L.marker([39.657652, -104.988023]).addTo(map);
 		 var marker9 = L.marker([39.797305, -105.038738]).addTo(map);
 		 var marker10 = L.marker([39.776849, -105.043555]).addTo(map);
-		 var marker11= L.marker([39.787373, -105.049982]).addTo(map);
+		 var marker11= L.marker([39.779267, -105.054595]).addTo(map);
+		var marker12= L.marker([39.779876, -105.043781]).addTo(map);
+		var marker13= L.marker([39.776498, -105.034262]).addTo(map);
+		var marker14= L.marker([39.678263, -104.96542]).addTo(map);
+		var marker15= L.marker([39.702525, -104.959044]).addTo(map);
+		
   var circle1 = L.circle([39.743825, -105.005586], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 4828.03
 }).addTo(map);
-
+	 
     var circle2 = L.circle([39.678934, -104.962628], {
-    color: 'red',
     color: 'purple',
-    fillColor: '#f03',
+    fillColor: '#800080',
     fillOpacity: 0.5,
     radius: 4828.03
 }).addTo(map);
-
- 
  var circle3 = L.circle([39.789624, -105.031872], {
     color: 'green',
-    fillColor: '#f03',
+    fillColor: '#008000',
     fillOpacity: 0.5,
     radius: 4828.03
 }).addTo(map);
@@ -220,11 +221,16 @@ feature.properties.MED_GROSS_RENT);
   marker4.bindPopup("<b>Coors Field</b><br>Sports/Concert Stadium.").openPopup();
   marker5.bindPopup("<b>Colorado Convention Center</b><br>Theater.").openPopup();
   marker6.bindPopup("<b>Ruby Hill</b><br>Ski/Snowboard Park.").openPopup();
-  marker7.bindPopup("<b>Washington Park</b><br>State Park.").openPopup();
-  marker8.bindPopup("<b>Lakeside</b><br>Amusement Park.").openPopup();
+  marker7.bindPopup("<b>Washington Park</b><br>City Park.").openPopup();
+  marker8.bindPopup("<b>Gothic Theartre</b><br>Amiptheatre.").openPopup();
   marker9.bindPopup("<b>Lowell Ponds</b><br>Wildlife Area.").openPopup();
   marker10.bindPopup("<b>Oriental Theatre</b><br>Ampitheatre.").openPopup();
-  marker11.bindPopup("<b>Willis Case Golf Course</b><br>Golf Course and Driving Range.").openPopup();
+  marker11.bindPopup("<b>Lakeside</b><br>Amusement Park.").openPopup();
+  marker12.bindPopup("<b>Local 46</b><br>Bar and Biergarten.").openPopup();
+  marker13.bindPopup("<b>Tocabe</b><br>Restaurant.").openPopup();
+  marker14.bindPopup("<b>Jerusalem</b><br>Restaurant.").openPopup();
+  marker15.bindPopup("<b>Bonie Brae</b><br>Tavern.").openPopup();
+  
 	circle1.bindPopup("Auraria Campus 3 mile Radius.");
 	circle2.bindPopup("University of Denver Campus 3 mile Radius.");
 	circle3.bindPopup("Regis University Campus 3 mile Radius.");
