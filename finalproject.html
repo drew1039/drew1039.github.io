@@ -10,8 +10,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<style>
 		html, body {
 			height: 100%;
@@ -138,100 +137,30 @@ feature.properties.MED_GROSS_RENT);
 		 var marker8 = L.marker([39.657652, -104.988023]).addTo(map);
 		 var marker9 = L.marker([39.797305, -105.038738]).addTo(map);
 		 var marker10 = L.marker([39.776849, -105.043555]).addTo(map);
-		 var marker11= L.marker([39.779267, -105.054595]).addTo(map);
+		 var marker11= L.marker([39.787373, -105.049982]).addTo(map);
 		var marker12= L.marker([39.779876, -105.043781]).addTo(map);
 		var marker13= L.marker([39.776498, -105.034262]).addTo(map);
 		var marker14= L.marker([39.678263, -104.96542]).addTo(map);
 		var marker15= L.marker([39.702525, -104.959044]).addTo(map);
-		
+
   var circle1 = L.circle([39.743825, -105.005586], {
     color: 'red',
     fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 4828.03
-}).addTo(map);
-	 
-    var circle2 = L.circle([39.678934, -104.962628], {
-    color: 'purple',
-    fillColor: '#800080',
-    fillOpacity: 0.5,
-    radius: 4828.03
-}).addTo(map);
- var circle3 = L.circle([39.789624, -105.031872], {
-    color: 'green',
-    fillColor: '#008000',
-    fillOpacity: 0.5,
-    radius: 4828.03
-}).addTo(map);
-		
-  var polygon1 = L.polygon([
-    [39.684422, -104.965117],
-    [39.683135, -104.961941],
-    [39.682715, -104.959565],
-    [39.680138, -104.959495],
-    [39.680118, -104.960048],
-    [39.678297, -104.960069],
-    [39.678288, -104.959589],
-    [39.673029, -104.959667],
-    [39.672983, -104.961201],
-    [39.671228, -104.961217],
-    [39.671257, -104.964049],
-    [39.673015, -104.964055],
-    [39.672982, -104.963465],
-    [39.67445, -104.963518],
-    [39.674459, -104.964023],
-    [39.674888, -104.964012],
-    [39.674871, -104.965203],
-    [39.683877, -104.96516],
-    [39.68396, -104.966362],
-    [39.685296, -104.966351],
-    [39.684699, -104.965181]
-]).addTo(map); 
-    
-	  var polygon2 = L.polygon([ 
-	  [39.742505, -105.013268],
-	  [39.743544, -105.01139],
-	  [39.74493, -105.009481],
-	  [39.746398, -105.007238],
-	  [39.747627, -105.00432],
-	  [39.747478, -105.002711],
-	  [39.745326, -105.000823],
-	  [39.742439, -105.000275],
-	  [39.741903, -105.000018],
-	  [39.741507, -105.000232],
-	  [39.740344, -105.000329],
-	  [39.740344, -105.004975],
-	  [39.740616, -105.0102],
-	  [39.740723, -105.012163],
-	  [39.742439, -105.013354]
-    
-]).addTo(map);
- var polygon3 = L.polygon([ 
-	 [39.791895, -105.034511],
-	 [39.791994, -105.030026],
-	 [39.791039, -105.029984],
-	 [39.791039, -105.025477],
-	 [39.787629, -105.025456],
-	 [39.787579, -105.034404]
-	 
-	 ]).addTo(map);
-		
-  marker1.bindPopup("<b>Empower Field</b><br>Sports/Concert Stadium.").openPopup();
-  marker2.bindPopup("<b>Ball Arena</b><br>Sports/Concert Stadium.").openPopup();
-  marker3.bindPopup("<b>Elitch Gardens</b><br>Amusement Park.").openPopup();
+@@ -238,11 +243,16 @@
   marker4.bindPopup("<b>Coors Field</b><br>Sports/Concert Stadium.").openPopup();
   marker5.bindPopup("<b>Colorado Convention Center</b><br>Theater.").openPopup();
   marker6.bindPopup("<b>Ruby Hill</b><br>Ski/Snowboard Park.").openPopup();
+  marker7.bindPopup("<b>Washington Park</b><br>State Park.").openPopup();
   marker7.bindPopup("<b>Washington Park</b><br>City Park.").openPopup();
-  marker8.bindPopup("<b>Gothic Theartre</b><br>Amiptheatre.").openPopup();
+  marker8.bindPopup("<b>Lakeside</b><br>Amusement Park.").openPopup();
   marker9.bindPopup("<b>Lowell Ponds</b><br>Wildlife Area.").openPopup();
   marker10.bindPopup("<b>Oriental Theatre</b><br>Ampitheatre.").openPopup();
-  marker11.bindPopup("<b>Lakeside</b><br>Amusement Park.").openPopup();
+  marker11.bindPopup("<b>Willis Case Golf Course</b><br>Golf Course and Driving Range.").openPopup();
   marker12.bindPopup("<b>Local 46</b><br>Bar and Biergarten.").openPopup();
   marker13.bindPopup("<b>Tocabe</b><br>Restaurant.").openPopup();
   marker14.bindPopup("<b>Jerusalem</b><br>Restaurant.").openPopup();
   marker15.bindPopup("<b>Bonie Brae</b><br>Tavern.").openPopup();
-  
+
 	circle1.bindPopup("Auraria Campus 3 mile Radius.");
 	circle2.bindPopup("University of Denver Campus 3 mile Radius.");
 	circle3.bindPopup("Regis University Campus 3 mile Radius.");
@@ -258,3 +187,14 @@ map.on('click', onMapClick);
 </script>
 </head>
 <body>
+<div id="header">
+	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 American Community Survey (Census) data</a></h1>
+  <h2> Which College Should I Attend? Average Rent Prices and Attractions Within a 3-Mile Radius of Each Campus </h2>
+	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
+</div>
+<div id="map"></div>
+</body>
+</html>
+0 comments on commit 7155563
+@drew1039
+Comment
